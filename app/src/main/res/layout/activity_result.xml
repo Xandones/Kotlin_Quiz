@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- This XML file sets the graphical elements of the result screen -->
+<!-- All tags are surrounded by the Linear Layout tag -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,6 +12,7 @@
     android:padding="20dp"
     tools:context=".ResultActivity">
     
+    <!-- This Text View tag refers to the "title" of the screen: Result -->
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
@@ -20,6 +23,7 @@
         android:textSize="25dp"
         android:textStyle="bold" />
 
+    <!-- This Image View tag refers to the trophy image -->
     <ImageView
         android:id="@+id/iv_trophy"
         android:layout_width="430dp"
@@ -27,6 +31,7 @@
         android:contentDescription="image"
         android:src="@drawable/ic_trophy" />
 
+    <!-- This Text View tag refers to the "You are awesome!" message -->
     <TextView
             android:id="@+id/tv_congratulations"
             android:layout_width="wrap_content"
@@ -37,6 +42,8 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
+
+        <!-- Here on this Text View will be shown the informed username -->
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
@@ -47,6 +54,7 @@
             android:textStyle="bold"
             tools:text="Username" />
 
+        <!-- In this Text View will be shown how many questions are right -->
         <TextView
             android:id="@+id/tv_score"
             android:layout_width="wrap_content"
@@ -56,6 +64,7 @@
             android:textSize="20sp"
             tools:text="Your Score is 9 out of 15" />
 
+        <!-- This Button tag reffers to the button that ends the game (resets) -->
         <Button
             android:id="@+id/btn_finish"
             android:layout_width="match_parent"

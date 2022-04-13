@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Linear Layout that surrounds all elements of the screen -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,6 +10,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!-- Text View who shows the name of the app -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,21 +21,23 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
+    <!-- White Material Card View that surrounds the login elements -->
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:layout_marginEnd="20dp"
         app:cardCornerRadius="25dp"
-        android:background="@color/white"
-    >
+        android:background="@color/white" >
 
+        <!-- Linear Layout that surrounds the login elements -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:orientation="vertical">
+            android:orientation="vertical" >
 
+            <!-- Text View who welcomes the user -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -41,9 +45,9 @@
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:textColor="@color/title"
-                />
+                android:textColor="@color/title" />
 
+            <!-- Text View who instructs the user to write his/her name -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,27 +57,28 @@
                 android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:textColor="#5390d9"
-                android:textColorHint="@color/subtitle"
-                />
+                android:textColorHint="@color/subtitle" />
 
+            <!-- Text Input Layout used to type the username -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_marginTop="20dp"
-            >
+                android:layout_marginTop="20dp" >
 
+                <!-- App Compat Edit Text - secondary element used to input text -->
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/et_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Your name here"
                     android:inputType="textCapWords"
-                    android:textColor="#5e60ce"
-                />
+                    android:textColor="#5e60ce" />
 
+                <!-- Text Input Layout closing tag -->
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- App Compat Button who will be used to send data -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_start"
                 android:layout_width="match_parent"
@@ -82,13 +87,13 @@
                 android:background="@color/title"
                 android:text="Start!"
                 android:textColor="@color/white"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
 
+            <!-- Closing tag of Linear Layout referring the login card -->
         </LinearLayout>
 
-
-
+        <!-- Closing tag of the White Material Card View -->
     </com.google.android.material.card.MaterialCardView>
 
+    <!-- Closing tag of main Linear Layout -->
 </LinearLayout>

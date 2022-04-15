@@ -20,7 +20,7 @@ object Constants {
         val questionsList = ArrayList<Question>()
         val que1 = Question(
             1, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_argentina,
+            R.drawable.ic_flag_of_argentina, // Here is where the flag images are set.
             "Argentina", "Australia", "Armenia", "Austria",
             1
         )

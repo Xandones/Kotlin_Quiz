@@ -1,11 +1,21 @@
 package com.cursokotlin.quiz
 
+// Here the class Constants is declared and instanced at the same time.
 object Constants {
 
+    // This val stores the username informed on login screen. It can't be changed while playing.
     const val USER_NAME : String = "user_name"
+
+    /* The total number of questions is stored here. It is informed at QuizQuestionsActivity.kt
+       It can't be changed because it's the size of the array of questions.
+       It's a string to facilitate displaying. */
     const val TOTAL_QUESTIONS : String = "total_questions"
+
+    // The amount of right answers is stored here. It's a string to facilitate displaying.
     const val CORRECT_ANSWERS : String = "correct_answers"
 
+    /* The function getQuestions sets every question including its alternatives and its right answer.
+       Here is also set a image of a flag to each question. In this project there are 15 questions. */
     fun getQuestions() : ArrayList<Question> {
         val questionsList = ArrayList<Question>()
         val que1 = Question(
@@ -128,6 +138,7 @@ object Constants {
         )
         questionsList.add(que15)
 
+        // The function returns an Array List with all the 15 questions.
         return questionsList
     }
 }
